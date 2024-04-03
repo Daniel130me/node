@@ -1,8 +1,9 @@
 const express = require('express');
 const app = express();
 const cors = require('cors')
+require('dotenv').config();
+console.log(process.env.API_KEY)
 const port = 3001;
-
 // Import MySQL library
 const mysql = require('mysql');
 const bcrypt = require('bcrypt')
@@ -10,10 +11,10 @@ const jwt = require('jsonwebtoken')
 
 // Set up the connection to the database
 var conn = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
+    host: process.env.HOST,
+    user: process.env.USER,
     password: '',
-    database: 'nodejsdb'
+    database: process.env.DATABASE
 });
 
 // Connect to the database
