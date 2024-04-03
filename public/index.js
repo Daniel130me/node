@@ -84,6 +84,7 @@ app.get('/getuser/:id', (req, res) => {
     });
 });
 
+
 app.put('/update/:id', (req, res) => {
     const name = sanitizeInput(req.body.name);
     const email = sanitizeInput(req.body.email);
