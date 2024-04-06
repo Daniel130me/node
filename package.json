@@ -1,8 +1,9 @@
 
 {
   "scripts": {
-    "start":"nodemon public/index.js"
-  },
+    "start": "node public/index.js",
+    "dev": "nodemon public/index.js"
+ },
   "dependencies": {
     "axios": "^1.6.8",
     "bcrypt": "^5.1.1",
